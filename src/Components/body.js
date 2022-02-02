@@ -1,18 +1,21 @@
-import React from 'react';
-import './body.css';
-import ProfileInfo from './bodyParts/ProfileInfo'
-// import { Alert } from 'react-alert';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import BodyCard from './bodyCard';
 
-const body = () => {
-
-
-  
-
-    return(
-        
-      <ProfileInfo />
-    
-    )
+export default function body() {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="lg">
+        <Box sx={{  bgcolor: '#cfe8fc', 
+                    height: '100vh', 
+                    width: '100%' 
+                }}>
+            <BodyCard />
+        </Box>        
+      </Container>
+    </React.Fragment>
+  );
 }
-
-export default body
