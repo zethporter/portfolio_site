@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
@@ -17,7 +18,15 @@ const bull = (
 
 export default function bodyCard() {
   return (
-    <Card sx={{ minWidth: 275, maxWidth: 450 }}>
+    <Card sx={{ minWidth: 350, maxWidth: 1000, margin: 1 }}>
+      <CardMedia
+        component="img"
+        height="200"
+        object-fit="stretch"
+        image="https://source.unsplash.com/random/?dog"
+        alt="Random Dog"
+        />
+      
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
