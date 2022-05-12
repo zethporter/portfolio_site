@@ -7,27 +7,70 @@ import Footer from './Components/footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
  
 const theme = createTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#4a6670',
+    palette: {
+      mode: 'dark',
+      type: 'dark',
+      primary: {
+        main: '#152729',
+      },
+      primaryDark: {
+        main: '#0C1516',
+      },
+      secondary: {
+        main: '#d88895',
+      },
+      background: {
+        paper: '#545454',
+      },
     },
-    secondary: {
-      main: '#d6a2ad',
+    typography: {
+      fontFamily: 'Ubuntu',
     },
-    info: {
-      main: '#a0af84',
+    shape: {
+      borderRadius: 4,
     },
-  },
-  shape: {
-    borderRadius: 4,
-  },
-  props: {
-    MuiTooltip: {
-      arrow: true,
+    props: {
+      MuiButton: {
+        size: 'small',
+      },
+      MuiButtonGroup: {
+        size: 'small',
+      },
+      MuiCheckbox: {
+        size: 'small',
+      },
+      MuiFab: {
+        size: 'small',
+      },
+      MuiFormControl: {
+        margin: 'dense',
+        size: 'small',
+      },
+      MuiFormHelperText: {
+        margin: 'dense',
+      },
+      MuiIconButton: {
+        size: 'small',
+      },
+      MuiInputBase: {
+        margin: 'dense',
+      },
+      MuiInputLabel: {
+        margin: 'dense',
+      },
+      MuiRadio: {
+        size: 'small',
+      },
+      MuiSwitch: {
+        size: 'small',
+      },
+      MuiTextField: {
+        margin: 'dense',
+        size: 'small',
+      },
     },
-  },
-});
+  });
+
 
 
 
@@ -36,7 +79,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Body />
+      <Body theme={theme} />
       <Footer />
     </ThemeProvider>
   );
