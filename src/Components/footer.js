@@ -7,9 +7,9 @@ import Link from '@mui/material/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.primary">
+    <Typography variant="body2" color="text.secondary">
       {'Copyright © '}
-      <Link color="inherit" href="www.zethporter.com">
+      <Link color="inherit" href="mailto:zethwporter@gmail.com">
         Zeth Porter
       </Link>{' '}
       {new Date().getFullYear()}
@@ -28,13 +28,13 @@ export default function footer() {
           px: 2,
           mt: 'auto',
           backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
+            theme.palette.mode === 'dark'
+              ? theme.palette.grey[800]
+              : theme.palette.grey[400],
         }}
       >
         <Container maxWidth="sm">
-          <Typography variant="body1">
+          <Typography color="text.primary" variant="body1">
             My sticky footer can be found here.
           </Typography>
           <Copyright />

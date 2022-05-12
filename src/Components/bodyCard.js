@@ -15,9 +15,9 @@ const bull = (
   </Box>
 );
 
-export default function bodyCard() {
+export default function bodyCard({ theme }) {
   return (
-    <Card sx={{ minWidth: 275, maxWidth: 450 }}>
+    <Card backgroundColor={theme.palette.grey[500]} >
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
@@ -35,7 +35,7 @@ export default function bodyCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button color="secondary" size="small">Learn More</Button>
       </CardActions>
     </Card>
   );
